@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentPostList">
+
+    <fragment
+        android:id="@+id/fragmentPostList"
+        android:name="com.example.endterm.FragmentPostList"
+        android:label="FragmentPostList" >
+        <action
+            android:id="@+id/action_fragmentPostList_to_fragmentDetailPage"
+            app:destination="@id/fragmentDetailPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDetailPage"
+        android:name="com.example.endterm.FragmentDetailPage"
+        android:label="FragmentDetailPage" >
+        <action
+            android:id="@+id/action_fragmentDetailPage_to_fragmentCommentList"
+            app:destination="@id/fragmentCommentList" />
+        <action
+            android:id="@+id/action_fragmentDetailPage_to_fragmentPostList"
+            app:destination="@id/fragmentPostList" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentCommentList"
+        android:name="com.example.endterm.FragmentCommentList"
+        android:label="FragmentCommentList" >
+        <action
+            android:id="@+id/action_fragmentCommentList_to_fragmentPostList"
+            app:destination="@id/fragmentPostList" />
+    </fragment>
+</navigation>
